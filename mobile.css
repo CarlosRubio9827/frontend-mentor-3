@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+/* font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; */
+:root{
+    --Brightorange: hsl(31, 77%, 52%);
+    --Darkcyan: hsl(184, 100%, 22%);
+    --Verydarkcyan: hsl(179, 100%, 13%);
+    /* Neutral */
+
+    /* (paragraphs) */
+    --Transparentwhite: hsla(0, 0%, 100%, 0.75);
+    /* (background, headings, buttons) */
+    --Verylightgray: hsl(0, 0%, 95%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    width: 100vw;
+    min-height: 100vh; 
+    align-items: center;
+    justify-content: center;
+    background: var(--Verylightgray);
+}
+
+.container{
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin: 50px 0;  
+    height: 1200px;   
+}
+.container .card{
+    display: flex;
+    flex-direction: column;
+    /* height: 100%; */
+    padding: 30px;
+    justify-content: space-between;
+    
+}
+.card.card-sedan{
+    background: var(--Brightorange);
+    border-radius: 10px 10px 0 0;
+}
+.card.card-suvs{
+    background: var(--Darkcyan);
+}
+.card.card-luxury{
+    background: var(--Verydarkcyan);
+    border-radius: 0 0 10px 10px;
+}
+.container .card img{
+    width: 50px;
+}
+.container .card h2{
+    color: var(--Verylightgray);
+    font-family: 'Big Shoulders Display', cursive;
+}
+.container .card p{
+    color: var(--Transparentwhite);
+    font-family: 'Lexend Deca', sans-serif;
+    font-family: 15px;
+}
+.container .card input{
+    width: 130px;
+    height: 30px;
+    border: 0;
+    border-radius: 20px;
+    background: var(--Verylightgray);
+}
+.container .card input:hover{
+    cursor: pointer;
+    border: 1px solid var(--Transparentwhite);
+    color: var(--Verylightgray);
+    background: transparent;
+}
+.card.card-sedan input{
+    color: var(--Brightorange);
+}
+.card.card-suvs input{
+    color: var(--Darkcyan);
+}
+.card.card-luxury input{
+    color: var(--Verydarkcyan);
+}
+
+
+@media screen and (min-width: 768px) {
+    
+.container{
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 400px;   
+}
+
+.card.card-sedan{
+    border-radius: 10px 0px 0 10px;
+}
+.card.card-luxury{
+    border-radius: 0 10px 10px 0;
+}
+  }
